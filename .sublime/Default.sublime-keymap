@@ -1,6 +1,6 @@
 [
     {
-        "keys": ["alt+m"],
+        "keys": ["alt+ctrl+m"],
         "command": "new_markdown_live_preview",
         "context": [
             {
