@@ -30,11 +30,13 @@ class NewMarkdownLivePreviewCommand(sublime_plugin.ApplicationCommand):
             'rows': [0.0, 1.0],
             'cells': [[0, 0, 1, 1], [1, 0, 2, 1]]
         })
-        self.window.focus_group(1)
-        preview = create_preview(self.window, current_view)
 
         self.window.focus_group(0)
+        preview = create_preview(self.window, current_view)
+
+        self.window.focus_group(1)
         md_view = self.window.open_file(file_name)
+
         mdsettings = md_view.settings()
 
         mdsettings.set(PREVIEW_ENABLED, True)
